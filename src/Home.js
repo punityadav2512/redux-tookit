@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
 const Home = () => {
-    const value = useSelector();
+    const { a } = useSelector(state => state.customReducer);
     const dispatch = useDispatch();
 
     const increment = () => {
@@ -26,7 +26,7 @@ const Home = () => {
     }
     return (
         <div>
-            <h1>{value}</h1>
+            <h1>{a}</h1>
 
 
             <button onClick={increment}>Increment</button>
